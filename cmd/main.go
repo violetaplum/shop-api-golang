@@ -1,4 +1,4 @@
-package cmd
+package main
 
 import (
 	"github.com/gin-gonic/gin"
@@ -17,7 +17,7 @@ func main() {
 		mux.ServeHTTP(c.Writer, newReq)
 	})
 	port := "9090"
-	err := route.Run(":", port)
+	err := route.Run(":" + port)
 	if err != nil {
 		panic(err)
 	}
